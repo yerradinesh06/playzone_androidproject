@@ -1,0 +1,31 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="48dp"
+    android:height="48dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Deep Navy #0F1F2A Background -->
+    <path android:fillColor="#0F1F2A" android:pathData="M0,0h108v108h-108z" />
+    
+    <!-- Outer Dynamic Arena Ring (Left Arc) in Crisp White -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M38,30 C27,30 20,38 20,54 C20,70 27,78 38,78 C42,78 45,76 48,73 L48,63 C45,66 42,67 38,67 C32,67 31,61 31,54 C31,47 32,41 38,41 C42,41 45,42 48,45 L48,35 C45,32 42,30 38,30 Z"/>
+
+    <!-- Dynamic Arena Field Diagonal Slant in Coral #FF8A65 -->
+    <path
+        android:fillColor="#FF8A65"
+        android:pathData="M52,28 L42,80 L52,80 L62,28 Z"/>
+
+    <!-- Right Dynamic Sports Arc & Play Apex in Coral #FF8A65 -->
+    <path
+        android:fillColor="#FF8A65"
+        android:pathData="M66,30 C77,30 84,38 84,54 C84,70 77,78 66,78 C62,78 59,76 56,73 L56,63 C59,66 62,67 66,67 C72,67 73,61 73,54 C73,47 72,41 66,41 C62,41 59,42 56,45 L56,35 C59,32 62,30 66,30 Z"/>
+
+    <!-- Central Sports Star / Turf Focal Orb in Pure White -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M52,54m-6,0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0"/>
+    <path
+        android:fillColor="#FF8A65"
+        android:pathData="M52,54m-3,0a3,3 0 1,0 6,0a3,3 0 1,0 -6,0"/>
+</vector>

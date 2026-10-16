@@ -1,0 +1,41 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="100dp"
+    android:viewportWidth="800"
+    android:viewportHeight="400">
+    <!-- Sky & Stadium Stands Glow -->
+    <path
+        android:fillColor="#1A237E"
+        android:pathData="M0,0h800v120H0z"/>
+    <path
+        android:fillColor="#311B92"
+        android:pathData="M0,120h800v40H0z"/>
+    <!-- Stadium Floodlights Glow -->
+    <path
+        android:fillColor="#FFECB3"
+        android:pathData="M60,20a25,25 0 1,0 50,0a25,25 0 1,0 -50,0zM690,20a25,25 0 1,0 50,0a25,25 0 1,0 -50,0z"/>
+    <!-- Mowed Outfield Grass Stripes -->
+    <path android:fillColor="#2E7D32" android:pathData="M0,160h800v240H0z"/>
+    <path android:fillColor="#1B5E20" android:pathData="M0,160h800v30H0zM0,220h800v30H0zM0,280h800v30H0zM0,340h800v30H0z"/>
+    <!-- Oval Boundary Line -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="4"
+        android:fillColor="#00000000"
+        android:pathData="M400,180 A340,90 0 1,0 400,360 A340,90 0 1,0 400,180 Z"/>
+    <!-- Pitch Clay Rect -->
+    <path
+        android:fillColor="#D7CCC8"
+        android:pathData="M340,240h120v60H340z"/>
+    <path
+        android:fillColor="#BCAAA4"
+        android:pathData="M350,245h100v50H350z"/>
+    <!-- Crease Lines & Stumps -->
+    <path
+        android:strokeColor="#FFFFFF"
+        android:strokeWidth="3"
+        android:pathData="M360,240v60M440,240v60M370,240v60M430,240v60"/>
+    <path
+        android:fillColor="#FFD54F"
+        android:pathData="M358,262h4v16h-4zM358,282h4v16h-4zM438,262h4v16h-4zM438,282h4v16h-4z"/>
+</vector>

@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="100dp"
+    android:viewportWidth="800"
+    android:viewportHeight="400">
+    <!-- Arena Background & Spectator Stands -->
+    <path android:fillColor="#212121" android:pathData="M0,0h800v110H0z"/>
+    <path android:fillColor="#FF6D00" android:pathData="M120,20a20,20 0 1,0 40,0a20,20 0 1,0 -40,0zM640,20a20,20 0 1,0 40,0a20,20 0 1,0 -40,0z"/>
+    <!-- Polished Hardwood Timber Court -->
+    <path android:fillColor="#E65100" android:pathData="M0,110h800v290H0z"/>
+    <path android:fillColor="#EF6C00" android:pathData="M0,110h800v25H0zM0,160h800v25H0zM0,210h800v25H0zM0,260h800v25H0zM0,310h800v25H0zM0,360h800v25H0z"/>
+    <!-- Court Boundary & Center Line -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="5" android:fillColor="#00000000"
+        android:pathData="M50,130h700v250H50zM400,130v250"/>
+    <!-- Center Circle -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="5" android:fillColor="#00000000"
+        android:pathData="M400,255m-45,0a45,45 0 1,0 90,0a45,45 0 1,0 -90,0"/>
+    <!-- Keys & 3-Point Arcs -->
+    <path android:fillColor="#D32F2F" android:pathData="M50,195h130v120H50zM750,195H620v120h130z"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="4" android:fillColor="#00000000"
+        android:pathData="M50,195h130v120H50zM750,195H620v120h130zM50,150a105,105 0 0,1 0,210M750,150a105,105 0 0,0 0,210"/>
+</vector>

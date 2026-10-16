@@ -1,0 +1,33 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- PlayZone Sculpted Athletic Letter 'P' Emblem -->
+    <!-- Safe zone: 18 to 90 (center at 54, 54) -->
+
+    <!-- Dynamic Speed Wing / Base Accent in Warm Peach -->
+    <path
+        android:fillColor="#FFAB91"
+        android:pathData="M44,56 L66,56 L54,80 L38,80 Z"/>
+
+    <!-- Athletic Stem of Letter 'P' in Pure White -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M32,26 L44,26 L44,80 C44,83 41,85 38,85 C35,85 32,83 32,80 Z"/>
+
+    <!-- Bold Sweeping Loop of Letter 'P' in Vibrant Coral #FF8A65 -->
+    <path
+        android:fillColor="#FF8A65"
+        android:pathData="M42,26 L64,26 C75,26 84,34 84,45 C84,56 75,64 64,64 L42,64 Z"/>
+
+    <!-- Inner Stadium Aperture in Deep Navy #0F1F2A -->
+    <path
+        android:fillColor="#0F1F2A"
+        android:pathData="M44,38 L62,38 C66,38 70,41 70,45 C70,49 66,52 62,52 L44,52 Z"/>
+
+    <!-- Central Sports Ball / Arena Focal Orb in Pure White -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M56,45m-4,0a4,4 0 1,0 8,0a4,4 0 1,0 -8,0"/>
+</vector>

@@ -1,0 +1,22 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="100dp"
+    android:viewportWidth="800"
+    android:viewportHeight="400">
+    <!-- Sky & Floodlights -->
+    <path android:fillColor="#0D47A1" android:pathData="M0,0h800v110H0z"/>
+    <path android:fillColor="#1565C0" android:pathData="M0,110h800v30H0z"/>
+    <path android:fillColor="#FFF59D" android:pathData="M100,30a30,30 0 1,0 60,0a30,30 0 1,0 -60,0zM640,30a30,30 0 1,0 60,0a30,30 0 1,0 -60,0z"/>
+    <!-- Lush Turf Mowed Lawn Stripes -->
+    <path android:fillColor="#2E7D32" android:pathData="M0,140h800v260H0z"/>
+    <path android:fillColor="#388E3C" android:pathData="M0,140h100v260H0zM200,140h100v260H200zM400,140h100v260H400zM600,140h100v260H600z"/>
+    <!-- White Field Boundary & Center Line -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="5" android:fillColor="#00000000" android:pathData="M40,160h720v210H40zM400,160v210"/>
+    <!-- Center Circle -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="5" android:fillColor="#00000000" android:pathData="M400,265m-50,0a50,50 0 1,0 100,0a50,50 0 1,0 -100,0"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M400,265m-6,0a6,6 0 1,0 12,0a6,6 0 1,0 -12,0"/>
+    <!-- Penalty Boxes -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="4" android:fillColor="#00000000" android:pathData="M40,210h110v110H40zM760,210H650v110h110z"/>
+    <!-- Goalposts -->
+    <path android:fillColor="#ECEFF1" android:pathData="M30,230h10v70H30zM760,230h10v70H760z"/>
+</vector>

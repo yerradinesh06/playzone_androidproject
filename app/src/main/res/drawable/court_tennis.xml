@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="100dp"
+    android:viewportWidth="800"
+    android:viewportHeight="400">
+    <!-- Green Court Surround -->
+    <path android:fillColor="#1B5E20" android:pathData="M0,0h800v400H0z"/>
+    <!-- US Open Blue Court Core -->
+    <path android:fillColor="#1565C0" android:pathData="M80,40h640v320H80z"/>
+    <!-- White Court Markings -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="5" android:fillColor="#00000000"
+        android:pathData="M110,65h580v270H110zM110,120h580M110,280h580M230,120v160M570,120v160M230,200h340M400,65v270"/>
+    <!-- Tennis Net Mesh -->
+    <path android:fillColor="#E0E0E0" android:pathData="M396,35h8v330h-8z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M397,35h6v12h-6z"/>
+</vector>

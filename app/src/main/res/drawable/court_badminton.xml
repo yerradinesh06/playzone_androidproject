@@ -1,0 +1,17 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="100dp"
+    android:viewportWidth="800"
+    android:viewportHeight="400">
+    <!-- Indoor Badminton Hall Surround -->
+    <path android:fillColor="#0288D1" android:pathData="M0,0h800v400H0z"/>
+    <!-- Synthetic Green BWF Mat -->
+    <path android:fillColor="#00897B" android:pathData="M80,40h640v320H80z"/>
+    <path android:fillColor="#00695C" android:pathData="M100,50h600v300H100z"/>
+    <!-- Court Boundary Lines -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="4" android:fillColor="#00000000"
+        android:pathData="M120,70h560v260H120zM400,70v260M120,200h560M180,70v260M620,70v260M250,70v260M550,70v260"/>
+    <!-- Center Net Mesh & Posts -->
+    <path android:fillColor="#37474F" android:pathData="M396,60h8v280h-8z"/>
+    <path android:fillColor="#FFFFFF" android:pathData="M397,60h6v12h-6z"/>
+</vector>

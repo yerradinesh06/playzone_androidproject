@@ -1,0 +1,16 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+    <!-- Blue Yonex Racket Oval & Frame -->
+    <path
+        android:strokeColor="#FF1976D2"
+        android:strokeWidth="2"
+        android:fillColor="#00000000"
+        android:pathData="M11,3c-3.31,0 -6,2.69 -6,6 0,2.83 2.05,5.18 4.75,5.85L5,20c-0.28,0.28 -0.28,0.72 0,1s0.72,0.28 1,0l4.85,-4.75C11.52,16.95 13.87,19 16.7,19c3.31,0 6,-2.69 6,-6 0,-3.31 -2.69,-6 -6,-6 -1.24,0 -2.39,0.38 -3.37,1.03"/>
+    <!-- Yellow Shuttlecock Badge -->
+    <path
+        android:fillColor="#FFFFD54F"
+        android:pathData="M5,5l3,3M8,5l-3,3M6,4l1,1"/>
+</vector>

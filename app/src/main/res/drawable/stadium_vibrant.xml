@@ -1,0 +1,23 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="200dp"
+    android:height="200dp"
+    android:viewportWidth="400"
+    android:viewportHeight="800">
+    <!-- Sunset Sky Gradient -->
+    <path android:fillColor="#1A237E" android:pathData="M0,0h400v200H0z"/>
+    <path android:fillColor="#283593" android:pathData="M0,200h400v100H0z"/>
+    <path android:fillColor="#303F9F" android:pathData="M0,300h400v100H0z"/>
+    <!-- Luminous Stadium Floodlight Towers -->
+    <path android:fillColor="#FFECB3" android:pathData="M30,40a20,20 0 1,0 40,0a20,20 0 1,0 -40,0zM330,40a20,20 0 1,0 40,0a20,20 0 1,0 -40,0z"/>
+    <!-- Stadium Seating Canopy Glow -->
+    <path android:fillColor="#C2185B" android:pathData="M0,360h400v60H0z"/>
+    <path android:fillColor="#1565C0" android:pathData="M0,420h400v60H0z"/>
+    <!-- Lush Green Arena Turf Base -->
+    <path android:fillColor="#2E7D32" android:pathData="M0,480h400v320H0z"/>
+    <path android:fillColor="#388E3C" android:pathData="M0,480h400v40H0zM0,560h400v40H0zM0,640h400v40H0zM0,720h400v40H0z"/>
+    <!-- Pitch White Field Line Markings -->
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="4" android:fillColor="#00000000"
+        android:pathData="M20,520h360v240H20zM200,520v240"/>
+    <path android:strokeColor="#FFFFFF" android:strokeWidth="4" android:fillColor="#00000000"
+        android:pathData="M200,640m-50,0a50,50 0 1,0 100,0a50,50 0 1,0 -100,0"/>
+</vector>

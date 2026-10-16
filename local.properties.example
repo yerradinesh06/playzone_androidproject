@@ -1,0 +1,14 @@
+# Copy to local.properties. Values are local build configuration; never commit this file.
+sdk.dir=C\:\\Users\\YOUR_USER\\AppData\\Local\\Android\\Sdk
+
+# Firebase console > Project settings > Android app. Enable Email/Password sign-in.
+firebaseApiKey=
+firebaseAppId=
+firebaseProjectId=
+firebaseSenderId=
+
+# Optional integrations. These URLs/IDs are not credentials, but keep local values out of VCS.
+googleWebClientId=
+spreadsheetId=
+publicCsvUrl=
+appsScriptUrl=

@@ -1,0 +1,16 @@
+.gradle/
+build/
+app/build/
+local.properties
+.idea/
+*.iml
+captures/
+*.apk
+*.aab
+*.hprof
+*.keystore
+*.jks
+google-services.json
+.DS_Store
+Thumbs.db
+app/schemas/room.incremental
