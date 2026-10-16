@@ -9,18 +9,18 @@ PlayZone is a native Android application built for sports enthusiasts and facili
 <p align="center">
   <img src="report_screenshots/screen_1_login.png" width="30%" alt="Login Screen" />
   <img src="report_screenshots/screen_3_role_selection.png" width="30%" alt="Role Selection" />
-  <img src="report_screenshots/screen_5_player_home.png" width="30%" alt="Player Home" />
+  <img src="report_screenshots/screen_4_onboarding.png" width="30%" alt="Player Onboarding" />
 </p>
 
 <p align="center">
+  <img src="report_screenshots/screen_5_player_home.png" width="30%" alt="Player Home" />
   <img src="report_screenshots/screen_6_venue_discovery.png" width="30%" alt="Explore Venues" />
   <img src="report_screenshots/screen_7_venue_detail.png" width="30%" alt="Venue Details & Slots" />
-  <img src="report_screenshots/screen_8_bookings.png" width="30%" alt="Player Bookings" />
 </p>
 
 <p align="center">
+  <img src="report_screenshots/screen_8_bookings.png" width="30%" alt="Player Bookings" />
   <img src="report_screenshots/screen_9_live_score.png" width="30%" alt="Live Match Scoreboard" />
-  <img src="report_screenshots/screen_11_manager_dashboard.png" width="30%" alt="Manager Dashboard" />
   <img src="report_screenshots/screen_10_profile_pdf.png" width="30%" alt="Profile & Standings PDF" />
 </p>
 
