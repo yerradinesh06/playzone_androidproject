@@ -1,48 +1,118 @@
-# PS 22 · Sports Venue Discovery, Booking & Management Platform
+# PlayZone — Sports Venue Discovery, Booking & Live Match Manager
 
-Complete, production-quality Android application connecting **VENUE MANAGERS** (who operate sports arenas, turfs, courts, manage equipment, operating hours, sessions, approve/reject booking requests, and manage live match scoreboards) and **PLAYERS** (who discover venues, filter sports sessions, book slots, track booking status, view live scoreboards, and review completed sessions).
-
-Built with Jetpack Compose, Room database, Coroutines/Flow, WorkManager, and a custom design system anchored on **Primary Plum (`#542A52`)** and **Peach Accent (`#FFB39A`)**.
+PlayZone is a native Android application built for sports enthusiasts and facility operators. It connects venue managers (who operate turfs, courts, arenas, and manage live match scoreboards) directly with players (who discover venues, reserve slots, track bookings, and control live matches).
 
 ---
 
-## Key Product Features
+## App Previews
 
-### 1. Authentication & Role Persistence
-- **Google Sign-In**: Start with `"Continue with Google"`.
-- **First-Time Role Selection**: Choose between **VENUE MANAGER** ("Manage arenas, sports sessions and bookings.") and **PLAYER** ("Discover arenas and book sports sessions.").
-- **Persistent Role Authorization**: Stored against the authenticated user account in Room Database (`UserEntity`). Future sign-ins automatically route to the correct role experience without re-asking.
+<p align="center">
+  <img src="report_screenshots/screen_1_login.png" width="30%" alt="Login Screen" />
+  <img src="report_screenshots/screen_3_role_selection.png" width="30%" alt="Role Selection" />
+  <img src="report_screenshots/screen_5_player_home.png" width="30%" alt="Player Home" />
+</p>
 
-### 2. Player Experience
-- **Home & Discovery**: Editorial greeting, search bar, popular sport category chips, nearby/featured venue hero cards with rating badges (`4.9 ★`), and upcoming booking shortcuts.
-- **Explore & Filtering**: Search venues by name, sport, area, date, time slot, availability, price range, and rating.
-- **Venue Detail**: High-quality sports photography, supported sports, operating hours, facilities (Parking, Lighting, Lockers, Wi-Fi), equipment breakdown (included free vs additional charge), venue rules, cancellation policy, customer reviews, and interactive time slot picker.
-- **Booking Flow**: Select session slot -> Review booking summary -> Enter player details & equipment requirements -> `"Send booking request"` (`PENDING` state).
-- **My Bookings**: Filter by `Upcoming`, `Pending`, `Past`, `Cancelled`. Unique booking references (e.g., `BK-20261012-0042`), cancellation option, and direct shortcut to open live match scoreboards or submit reviews.
-- **Sport-Aware Live Scoreboards**: Live scoring interfaces tailored per sport:
-  - **Cricket**: Runs, Wickets, Overs (e.g., `142/3 (18.2 ov)`).
-  - **Football**: Home vs Away scores, Match timer (`68'`), Goal event timeline.
-  - **Basketball**: Points, Quarters (`Q3`), Game clock.
-  - **Badminton & Volleyball**: Sets and Points.
-- **Notifications Feed**: Real notifications with unread badges, deep-linking directly to booking details, venues, or live scoreboards.
+<p align="center">
+  <img src="report_screenshots/screen_6_venue_discovery.png" width="30%" alt="Explore Venues" />
+  <img src="report_screenshots/screen_7_venue_detail.png" width="30%" alt="Venue Details & Slots" />
+  <img src="report_screenshots/screen_8_bookings.png" width="30%" alt="Player Bookings" />
+</p>
 
-### 3. Venue Manager Experience
-- **Operational Dashboard**: Managed arenas overview, pending requests counter, confirmed bookings, and quick actions (`"Add Session"`, `"Add Venue"`).
-- **Schedule Grid**: Interactive calendar/time grid showing `CONFIRMED` bookings, `PENDING` requests, `BLOCKED` maintenance periods, and `FREE / AVAILABLE` slots.
-- **Booking Requests Management**: Review player booking requests with complete player information, sport, slot, and equipment requested.
-  - `"Approve"`: Confirms booking, updates session status to `BOOKED`, creates live match scoreboard, and sends notification to Player.
-  - `"Reject"`: Rejection modal capturing reason (`Time unavailable`, `Venue maintenance`, `Already booked`, `Insufficient capacity`, `Other`).
-- **Transactional Conflict Protection**: Automatically checks for time slot overlap upon approval. If another booking for the same slot was already confirmed, the second request is automatically rejected with explicit conflict notice to the player.
+<p align="center">
+  <img src="report_screenshots/screen_9_live_score.png" width="30%" alt="Live Match Scoreboard" />
+  <img src="report_screenshots/screen_11_manager_dashboard.png" width="30%" alt="Manager Dashboard" />
+  <img src="report_screenshots/screen_10_profile_pdf.png" width="30%" alt="Profile & Standings PDF" />
+</p>
 
 ---
 
-## Technical Stack & Architecture
+## Core Features
 
-- **Language & Framework**: Kotlin, Jetpack Compose, Material 3 Foundation
-- **Local Persistence**: Room Database v3 (`ps22.db`) with `fallbackToDestructiveMigration`
-- **Background Tasks**: WorkManager (24-hour and 1-hour pre-session notification alerts)
-- **Design Tokens**: Primary Plum (`#542A52`), Peach Accent (`#FFB39A`), Dark Background (`#0B0D10`), Light Surface (`#F7F5F2`), Warm Surface (`#EFEAE5`)
-- **Testing**: JUnit 4 & Coroutines Test
+### 1. Dual-Role Architecture
+* **Player Workspace**:
+  * Discover arenas, turfs, and courts with real photos, distance, and ratings.
+  * Filter by sport (Football, Cricket, Badminton, Basketball, Tennis, Volleyball), date, price, and amenities.
+  * Reserve available time slots or request custom slots with team/squad names.
+  * Track booking status (Pending, Confirmed, Completed, Cancelled) with unique references.
+  * In-app notifications for confirmation, conflict alerts, and reminders.
+* **Venue Manager Workspace**:
+  * Manage multiple sports arenas, operating hours, amenities, and equipment.
+  * Review booking requests: Approve confirmed bookings or decline with specific reasons.
+  * Conflict protection: Automatic overlap prevention across identical time slots.
+  * Add custom slots, block maintenance hours, and inspect venue schedules.
+
+### 2. Live Match Scoreboards & Multi-Device Sync
+* Built-in sport-tailored scoreboards:
+  * **Football**: Goals, team names, match timer, kicking events.
+  * **Cricket**: Runs, wickets, overs, and match summary.
+  * **Basketball & Badminton**: Points, quarters, and sets.
+* **On-the-Fly Customization**: Authorized scorers (booked player or manager) can rename squads/teams directly from the scorecard.
+* **Dual Real-Time Sync**:
+  * **LAN UDP P2P Broadcast**: Broadcasts scores instantly over local Wi-Fi without internet latency.
+  * **Cloud Sync (Firestore)**: Keeps remote spectators and offline sessions synchronized.
+
+### 3. League Management & PDF Export
+* Tournament bracket engine supporting single-elimination and round-robin structures.
+* Standings tables and fixture schedule export directly to formatted PDF files.
+* Biometric authentication support and theme toggle (Dark / Light mode).
+
+---
+
+## Architecture & Tech Stack
+
+* **Language**: Kotlin 2.3+ (Java 21/23 target)
+* **UI**: 100% Jetpack Compose with Material 3 Design
+* **Local Database**: Room DB (`Ps22Database`) with reactive Kotlin Flows
+* **Concurrency**: Kotlin Coroutines (`Flow`, `StateFlow`, `SupervisorJob`)
+* **Background Tasks**: WorkManager for scheduled session reminders
+* **Remote Sync**: Firebase Firestore & LAN UDP socket multicasting
+* **Dependency Injection & Architecture**: Clean Architecture with Repository pattern
+
+---
+
+## Getting Started
+
+### Prerequisites
+* Android Studio Ladybug (2024.2+) or newer
+* Android SDK 35 (minSdk 26, targetSdk 35)
+* JDK 17 or higher
+
+### Local Setup
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yerradinesh06/playzone_androidproject.git
+   cd playzone_androidproject
+   ```
+
+2. Configure local SDK:
+   Copy `local.properties.example` to `local.properties`:
+   ```bash
+   cp local.properties.example local.properties
+   ```
+   Set your Android SDK path in `local.properties` (e.g. `sdk.dir=C:\\Users\\<YourName>\\AppData\\Local\\Android\\Sdk`).
+
+3. Configure Firebase (Optional for Google Sign-In & Remote Sync):
+   * Create a project in the [Firebase Console](https://console.firebase.google.com/).
+   * Download your `google-services.json` and place it inside the `app/` directory (see `app/google-services.json.example` for reference).
+
+4. Build and run:
+   ```bash
+   ./gradlew assembleDebug
+   ```
+
+---
+
+## Database Schema Overview
+
+| Entity Table | Purpose |
+|---|---|
+| `users` | User credentials, display name, phone/squad tag, and role (PLAYER / VENUE_MANAGER). |
+| `venues` | Sports facilities, operating hours, coordinates, supported sports, pricing. |
+| `sessions` | Individual hourly time slots, capacity, status (AVAILABLE, BOOKED, BLOCKED). |
+| `bookings` | Booking requests, player information, squad names, timestamps, approval status. |
+| `match_scoreboards` | Real-time score state, team A/B names, sport type, and controller ID. |
+| `scoreboard_events` | Match timeline events (goals, team updates, kickoff). |
+| `notifications` | User notifications for status updates and reminders. |
 
 ---
 
@@ -60,16 +130,6 @@ Run the following commands from the project root:
 
 ---
 
-## Data Schema & Headers
+## License
 
-Key entity tables in `Ps22Database`:
-
-- **`users`**: `id, googleAccountId, name, email, phone, photoUrl, role, createdAt, updatedAt`
-- **`venues`**: `id, managerId, name, venueType, supportedSports, description, phone, email, address, area, city, operatingHours, facilities, rules, cancellationPolicy, coverImage, images, rating, reviewCount, createdAt`
-- **`equipment`**: `id, venueId, sport, name, quantity, isIncludedFree, additionalCharge, notes`
-- **`sessions`**: `id, venueId, sport, date, startTime, endTime, durationMinutes, capacity, bookedCount, price, status, createdAt`
-- **`bookings`**: `id, bookingReference, playerId, playerName, playerEmail, playerPhone, playerCount, venueId, venueName, sessionId, sport, date, startTime, endTime, price, equipmentRequested, notes, status, rejectionReason, cancellationReason, createdAt, updatedAt`
-- **`notifications`**: `id, userId, title, message, type, targetEntityId, isRead, timestamp`
-- **`reviews`**: `id, venueId, bookingId, playerId, playerName, rating, comment, createdAt`
-- **`match_scoreboards`**: `id, bookingId, venueId, sport, teamA, teamB, scoreA, scoreB, detailText, status, controllerUserId, updatedAt`
-- **`scoreboard_events`**: `id, matchId, timestampText, eventType, description, createdAt`
+This project is developed for academic and personal portfolio demonstration. All rights reserved.
